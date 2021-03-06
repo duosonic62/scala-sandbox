@@ -12,7 +12,11 @@ object Main {
     list2.foreach(f => println("list: " + f))
     println(list2.mkString(","))
 
-
+    val m = Map("A"  -> 1, "B" -> 2)
+    // updateは新しいマップを作る非破壊メソッド
+    val m2 = m.updated("A", 3)
+    println(m.mkString(","))
+    println(m2.mkString(","))
   }
 
   def swapArray[T] (arr: Array[T]) (i: Int, j: Int): Unit = {
